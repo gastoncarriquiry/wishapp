@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WishAPP</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/alertify.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <div id="backdrop"></div>
+    <main id="login">
+        <img src="assets/logoWishapp.png" alt="Logo WISHAPP">
+        <h1>WISHAPP</h1>
+        <section>
+            <h2>INICIAR SESIÓN</h2>
+            <fieldset>
+                <label for="inp_mailL">Correo electrónico</label>
+                <input type="email" id="inp_mailL" required placeholder="Ingrese su correo electrónico" value="">
+                <label for="inp_pwdL">Contraseña</label>
+                <input type="password" id="inp_pwdL" required placeholder="Ingrese su contraseña" value="">
+            </fieldset>
+            <button id="btn_login" class="btn">INICIAR SESIÓN</button>
+            <p>¿No tienes cuenta? <a href="#" id="lnkRegistro">REGISTRARSE</a></p>
+        </section>
+    </main>
+    <main id="registro">
+        <img src="assets/logoWishapp.png" alt="Logo WISHAPP">
+        <h1>WISHAPP</h1>
+        <section>
+            <h2>CREA TU CUENTA</h2>
+            <fieldset>
+                <label for="inp_mail">Correo electrónico</label>
+                <input type="email" id="inp_mail" required placeholder="Ingrese su correo electrónico" value="">
+                <label for="inp_pais">País</label>
+                <select id="inp_pais" required>
+                    <option selected hidden value="">Seleccione su país de residencia</option>
+                    <option disabled value="disabled">--Seleccione su país de residencia--</option>
+                </select>
+                <label for="inp_pwd">Contraseña</label>
+                <input type="password" id="inp_pwd" required placeholder="Ingrese su contraseña">
+                <label for="inp_confirm">Confirmar contraseña</label>
+                <input type="password" id="inp_confirm" required placeholder="Repita su contraseña">
+            </fieldset>
+            <button id="btn_register" class="btn">CREAR CUENTA</button>
+            <p>¿Ya tienes cuenta? <a href="#" id="lnkLogin">INICIAR SESIÓN</a></p>
+        </section>
+    </main>
+    <main id="index">
+        <form id="ingresoWish">
+            <input type="button" id="close" class="close" value="+">
+            <h2>Agregar Artículo</h2>
+            <fieldset>
+                <div id="titulo">
+                    <label for="inp_titulo">Título del producto (*):</label> <br>
+                    <input type="text" placeholder="i.e. Tira de luces LED" id="inp_titulo">
+                </div>
+
+                <div id="color">
+                    <label for="selectColor">Color:</label><br>
+                    <select id="selectColor">
+                        <option selected hidden value="">Color del producto</option>
+                        <option disabled value="disabled">--Color del producto--</option>
+                    </select>
+                </div>
+
+                <div id="categoria">
+                    <label for="selectCategoria">Categoría (*):</label><br>
+                    <select id="selectCategoria">
+                        <option selected hidden value="">Tipo de producto</option>
+                        <option disabled value="disabled">--Tipo de producto--</option>
+                    </select>
+                </div>
+
+                <div id="marca" class="notRopa">
+                    <label for="inp_marca">Marca (*):</label>
+                    <input type="text" id="inp_marca" placeholder="i.e. Samsung">
+                </div>
+
+                <div id="modelo" class="notRopa">
+                    <label for="inp_modelo">Modelo:</label>
+                    <input type="text" id="inp_modelo" placeholder="i.e. Galaxy S20">
+                </div>
+
+                <div id="talle">
+                    <label for="inp_talle">Talle:</label><br>
+                    <input type="text" id="inp_talle" placeholder="i.e. 43 EU">
+                </div>
+
+                <div id="precio">
+                    <label for="inp_precio">Precio (*):</label><br>
+                    <input type="number" id="inp_precio" placeholder="USD">
+                </div>
+
+                <div id="tienda">
+                    <label for="inp_tienda">Tienda (*):</label><br>
+                    <input type="text" id="inp_tienda" placeholder="i.e. Zara">
+                </div>
+
+                <div id="link">
+                    <label for="inp_link">URL de Referencia (*):</label><br>
+                    <input type="url" id="inp_link" placeholder="Copia y pega el link del producto">
+                </div>
+            </fieldset>
+            <input type="button" class="btn" id="btn_ingresarWish" value="AGREGAR ARTÍCULO">
+        </form>
+        <form id="modificarWish">
+            <input type="button" id="close2" class="close" value="+">
+            <h2>Modificar Artículo</h2>
+            <fieldset id="modificador"></fieldset>
+            <input type="button" class="btn" id="btn_modificarWish" value="MODIFICAR ARTÍCULO">
+        </form>
+        <section id="title">
+            <img src="assets/logoWishapp.png" alt="Logo WishAPP">
+            <h1>WISHAPP</h1>
+        </section>
+        <section id="miCuenta">
+            <a href="#" id="cerrarSesion">
+                <h2>Mi Cuenta</h2>
+                <img src="assets/iconUser.png" alt="Mi Cuenta icon" id="userIcon">
+            </a>
+        </section>
+        <section id="lista">
+            <button id="btn_wish"><img src="assets/agregarProducto.png" alt="Agregar Producto"></button>
+            <div id="listaDIV">
+            </div>
+        </section>
+        <section id="filtros">
+            <h2>Filtrar</h2>
+            <h3>Tienda:</h3>
+            <select id="filtroTienda">
+                <option selected hidden value="">Seleccione la tienda deseada</option>
+                <option disabled value="disabled">--Seleccione la tienda deseada--</option>
+                <option value="todas">Todas las tiendas</option>
+            </select>
+            <h3>Categoría:</h3>
+            <select id="filtroCategoria">
+                <option selected hidden value="">Seleccione el tipo de artículo deseado</option>
+                <option disabled value="disabled">--Seleccione el tipo de artículo deseado--</option>
+                <option value="todos">Todos los artículos</option>
+            </select>
+            <h3>Precio:</h3>
+            <select id="filtroPrecio">
+                <option value="LtoH">$ - $$$ | Ascendente</option>
+                <option value="HtoL">$$$ - $ | Descendente</option>
+            </select>
+            <h3>Palabra Clave:</h3>
+            <input type="text" id="filtroKeyword" placeholder="Ingrese una palabra clave..."> <br>
+            <input type="button" value="RESTABLECER FILTROS" class="btn_articulo" id="btn_reset">
+        </section>
+    </main>
+    <script src="js/alertify.js"></script>
+    <script src="js/codigoLogin.js"></script>
+    <script src="js/codigoRegister.js"></script>
+</body>
+
+
+</html>
