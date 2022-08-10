@@ -48,7 +48,7 @@ The connection URL should look like this:
 ```bash
   `mongodb+srv://${DB_USER}:${DB_PASS}@cluster0.cwrzz.mongodb.net/<database>?retryWrites=true&w=majority`
 ```
-_<database>_ is the name of the database created for the purpose of this project. **Inside this database you must create a collection called _deseos_ and another one called _usuarios_.**
+*< database >* should be replaced with the name of the database created for the purpose of this project. **Inside this database you must create a collection called _deseos_ and another one called _usuarios_.**
 
 ## Deployment
 
